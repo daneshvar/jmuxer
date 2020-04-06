@@ -8,6 +8,12 @@ declare class JMuxer {
         fps?: number,
         debug?: boolean,
     });
+
+    feed(data: {
+        duration?: number,
+        video?: Uint8Array,
+        audio?: Uint8Array,
+    }): void;
 }
 
 declare module "jmuxer" {
